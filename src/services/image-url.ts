@@ -1,0 +1,6 @@
+export default function getCroppedImage(url:string){
+    // return url
+    const target='/media/g';
+    const index=url.indexOf(target)-2+target.length;
+    return url.slice(0,index)+'/crop/600/400'+url.slice(index);
+}

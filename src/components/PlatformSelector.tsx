@@ -5,7 +5,7 @@ import type { Platform } from "../hooks/useGames";
 
 interface prop{
     onSelectPlatform:(platform:Platform)=>void;
-    selectedPlatform:Platform
+    selectedPlatform:Platform|null
 }
 const PlatformSelector = ({onSelectPlatform,selectedPlatform}:prop) => {
   const { data,error } = usePlatforms();
